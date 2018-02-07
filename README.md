@@ -21,6 +21,16 @@ backend, err := LoadFromPlugin("/path/to/custom/auth/plugin.so", "NewAuthenticat
 **Plugin**
 
 ```
+package main
+
+import (
+  "net/http"
+)
+
+import (
+  "github.com/spatialcurrent/go-auth-backend/authbackend"
+)
+
 func NewAuthenticationBackend() authbackend.Backend {
   return &MyCustomAuthBackend{}
 }
